@@ -1,0 +1,9 @@
+<resources>
+  <color name="splashscreen_background">#121212</color>
+  <color name="iconBackground">#121212</color>
+  <color name="colorPrimary">#023c69</color>
+  <color name="colorPrimaryDark">#121212</color>
+
+  <!-- 🔧 Add this line below to fix the launcher background issue -->
+  <color name="ic_launcher_background">#121212</color>
+</resources>
