@@ -20,8 +20,6 @@ export default function Index() {
     queryKey: ["movies"],
     queryFn: () => fetchMovies(),
   });
-  console.log(JSON.stringify(data, null, 2));
-  // console.log(data, isLoading, isError, error);
   return (
     <View className="flex-1 bg-primary">
       <StatusBar style="light" />
@@ -48,11 +46,16 @@ export default function Index() {
         ) : (
           <View className="flex-1 mt-5">
             <SearchBar
-              onPress={() => router.push("/search")}
+              onPress={() =>
+                router.push({
+                  pathname: "/search",
+                  params: { shouldFocus: "true" },
+                })
+              }
               placeHolder="Search for a movies"
             />
             <>
-              <Text className="textlg text-white font-bold mt-5 mb-3">
+              <Text className="text-xl text-white font-bold mt-5 mb-3">
                 Latest Movies
               </Text>
               <FlatList

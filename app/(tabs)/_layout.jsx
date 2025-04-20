@@ -9,7 +9,7 @@ const TabIcons = ({ focused, title, icon }) => {
     return (
       <ImageBackground
         source={images.highlight}
-        className="flex flex-row w-full flex-1 min-w-[92px] rounded-full min-h-14 mt-4 justify-center items-center overflow-hidden border-4 border-x-8 px-4 border-dark-200"
+        className="flex flex-row w-full flex-1 min-w-[100px] rounded-full min-h-14 mt-4 justify-center items-center overflow-hidden border-4 border-x-8 px-4 border-dark-200"
       >
         <Image source={icon} tintColor="#151312" className="size-5" />
         <Text className="text-secondary font-semibold ml-2 text-sm">
@@ -28,6 +28,7 @@ const TabIcons = ({ focused, title, icon }) => {
 const _layout = () => {
   return (
     <Tabs
+      initialRouteName="search"
       screenOptions={{
         tabBarShowLabel: false,
         tabBarItemStyle: {
@@ -39,13 +40,14 @@ const _layout = () => {
         tabBarStyle: {
           backgroundColor: "#0f0d23",
           borderRadius: 60,
-          marginHorizontal: 14,
+          marginHorizontal: 10,
           marginBottom: 10,
           height: 54,
           position: "absolute",
           overflow: "hidden",
           borderWidth: 1,
           borderColor: "#0f0d23",
+          elevation: 3,
         },
       }}
     >

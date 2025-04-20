@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const IMAGE_BASE_URL = "";
+export const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/";
 
 const TMDB_CONFIG = {
     BASE_URL: "https://api.themoviedb.org/3/",
